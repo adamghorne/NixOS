@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # AGH Working?
-# AGH Testing Github. 1.
+# AGH Testing Github. 1. 2. 
 
 { config, pkgs, ... }:
 
