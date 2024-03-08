@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 # AGH Working?
-# AGH Testing Github. 1. 2. 
+# AGH Testing Github. 1. 2.
 
 { config, pkgs, ... }:
 
@@ -100,11 +100,17 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # AGH Enable the Flakes feature and the accompanying new nix command-line tool
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+  wget
+  git
+  curl
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
