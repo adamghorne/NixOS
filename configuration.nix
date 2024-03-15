@@ -95,6 +95,7 @@
       kate
       git
       vscode
+      docker-compose
     #  thunderbird
     ];
   };
