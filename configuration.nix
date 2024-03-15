@@ -91,11 +91,6 @@
     description = "Adam Horne";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
-      firefox
-      kate
-      git
-      vscode
-      docker-compose
     #  thunderbird
     ];
   };
@@ -117,6 +112,11 @@
   wget
   git
   curl
+  firefox
+  kate
+  git
+  vscode
+  docker-compose
 
   ];
 
