@@ -89,7 +89,7 @@
   users.users.adamhorne = {
     isNormalUser = true;
     description = "Adam Horne";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
       kate
@@ -120,8 +120,15 @@
   ];
 
   # AGH Setup Docker
-  virtualisation.docker.enable = true;
-  virtualisation.docker-compose.enable = true;
+  virtualisation = {
+    docker = {
+      enable = true;
+      autoPrune = {
+        enable = true;
+        dates = "weekly";
+      };
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
