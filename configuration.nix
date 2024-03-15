@@ -120,11 +120,9 @@
   ];
 
   # AGH Setup Docker
-
-  {
   virtualisation.docker.enable = true;
   virtualisation.docker-compose.enable = true;
-  }
+  
 
 
   # Some programs need SUID wrappers, can be configured further or are
